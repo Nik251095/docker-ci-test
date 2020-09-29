@@ -3,8 +3,11 @@ type: kubernetes
 name: default
 
 steps:
-- name: greeting
-  image: golang:1.12
+- name: step1
+  image: alpine
   commands:
-  - go build
-  - go test
+  - echo "step 1"
+- name: step2
+  image: alpine
+  commands:
+  - echo "step 2"est
