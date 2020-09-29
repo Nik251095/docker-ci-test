@@ -1,13 +1,14 @@
 kind: pipeline
 type: kubernetes
 name: default
-
 steps:
 - name: step1
   image: alpine
   commands:
+  - sleep "60s"
   - echo "step 1"
 - name: step2
   image: alpine
   commands:
-  - echo "step 2"est
+  - sleep "60s"
+  - echo "step 2"
