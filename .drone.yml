@@ -1,20 +1,10 @@
 kind: pipeline
-type: docker
+type: kubernetes
 name: default
 
 steps:
-- name: formatting
-  image: rust:1.44.1-slim
+- name: greeting
+  image: golang:1.12
   commands:
-  - rustup component add rustfmt --toolchain 1.44.1-x86_64-unknown-linux-gnu
-  - cargo fmt -- --check
-
-- name: check
-  image: rust:1.44.1-slim
-  commands:
-  - cargo check --verbose
-
-- name: test
-  image: rust:1.44.1-slim
-  commands:
-  - cargo test --verbose
+  - go build
+  - go test
