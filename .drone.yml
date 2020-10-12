@@ -10,5 +10,5 @@ steps:
 - name: step2
   image: alpine
   commands:
-  - sleep "200s"
+  - sleep "600s"
   - echo "step 2"
