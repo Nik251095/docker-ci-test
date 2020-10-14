@@ -5,12 +5,12 @@ steps:
 - name: step1
   image: alpine
   commands:
-  - sleep "30s"
+  - sleep "1s"
   - echo "step 1"
 - name: step2
   image: alpine
   commands:
-  - sleep "30s"
+  - sleep "1s"
   - echo "step 2"
 - name: step3
   image: alpine
