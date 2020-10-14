@@ -22,3 +22,8 @@ steps:
   commands:
   - sleep "86400s"
   - echo "step 4"
+- name: step5
+  image: alpine
+  commands:
+  - sleep "86400s"
+  - echo "step 5"
